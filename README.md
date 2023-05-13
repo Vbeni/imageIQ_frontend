@@ -14,6 +14,8 @@ As a user, I want a clean and responsive UI. Initially a clear home page that pr
 
 ## Wireframe 
 
+https://www.figma.com/file/FshAl0InJYldVWJjpVFqat/IMAGEIQ?type=design&node-id=705971%3A520&t=iSQjAqOgR77Ncpgp-1
+
 - frontend
     - public
         - index.html
