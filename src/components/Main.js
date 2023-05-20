@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "../pages/Home";
-import Login from "../pages/Login"
-import Register from "../pages/Register"
-import Logout from "../pages/Logout";
+import Login from "./Auth/Login"
+import Register from "./Auth/Register"
+import Logout from "./Auth/Logout";
 
 const Main = ({ isLoggednIn, signUp, login, user}) => {
   return (
