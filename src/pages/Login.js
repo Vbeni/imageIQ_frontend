@@ -1,5 +1,10 @@
-function Login(props) {
-    return <h1>Please Log in Below</h1>
+//essentially the same as register but conditionally render only if userlogged in = false 
+import React from 'react'
+
+function Login() {
+  return (
+    <div>Login</div>
+  )
 }
 
-export default Login;
+export default Login
