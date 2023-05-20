@@ -4,16 +4,17 @@ import Login from "../pages/Login"
 import Register from "../pages/Register"
 import Logout from "../pages/Logout";
 
-const Main = () => {
+const Main = ({ isLoggednIn, signUp, login, user}) => {
   return (
-    <main>
+    <div className="Main">
       <Routes>
        <Route path='/' element={<Home />} />
-        <Route path='/Register' element={<Register />} />
+        <Route path='/Register' element={<Register signUp={signUp}/>} />
         <Route path='/Login' element={<Login/>} />
         <Route path='/Logout' element={<Logout />} />
+        
       </Routes>
-    </main>
+    </div>
   )
 }
 

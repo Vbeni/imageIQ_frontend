@@ -80,7 +80,12 @@ function App() {
   return (
     <div className="App">
       <Header user={currentUser}/>
-      <Main isLoggedIn={isAuthenticated} signup={registerUser} login={loginUser} user={currentUser} />
+      <Main 
+      isLoggedIn={isAuthenticated} 
+      signUp={registerUser} 
+      login={loginUser} 
+      user={currentUser} 
+      />
       <Footer />
     </div>
   );
