@@ -8,6 +8,6 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
 
 //maybe sign up or log in buttons here instead of header
