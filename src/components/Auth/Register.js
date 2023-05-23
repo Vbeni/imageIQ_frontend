@@ -11,7 +11,8 @@ const Register = ({signUp}) => {
     const createdUserToken = await signUp(input)
 
     if (createdUserToken) {
-      navigate("/user")
+      console.log(createdUserToken)
+      navigate(`/user/${createdUserToken.currentUser._id}`);
     } else {
       navigate("/")
     }

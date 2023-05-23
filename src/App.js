@@ -83,8 +83,9 @@ function App() {
       <Main 
       isLoggedIn={isAuthenticated} 
       signUp={registerUser} 
-      login={loginUser} 
+      signIn={loginUser} 
       user={currentUser} 
+     
       />
       <Footer />
     </div>
