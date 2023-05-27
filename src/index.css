@@ -35,3 +35,37 @@
 .nav-link:hover, .nav-links-right a:hover {
   color: white;
 }
+
+.home {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  padding: 1em;
+}
+
+.home h1 {
+  color: black;
+  font-size: 1em;
+  line-height: 2;
+  margin-bottom: 2em;
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.link-button {
+  color: black;
+  background-color: grey;
+  text-decoration: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: white;
+}
