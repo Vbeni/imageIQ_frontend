@@ -5,6 +5,7 @@ import Register from "./Auth/Register"
 import Logout from "./Auth/Logout";
 import Profile from "./UserProfile/Profile";
 import UploadImage from "./UserProfile/UploadImage";
+import React from 'react'
 
 const Main = ({ isLoggedIn, signUp, signIn, user, uploadImage}) => {
   return (

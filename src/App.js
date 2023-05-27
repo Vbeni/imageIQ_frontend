@@ -9,7 +9,7 @@ import { setUserToken, clearUserToken } from './utils/authToken'
 function App() {
   const [currentUser, setCurrentUser] = useState({})
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-
+  
   const registerUser = async (data) => {
     try {
 
@@ -85,7 +85,6 @@ function App() {
       signUp={registerUser} 
       signIn={loginUser} 
       user={currentUser} 
-     
       />
       <Footer />
     </div>

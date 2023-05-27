@@ -1,5 +1,6 @@
+import React from 'react'
 import { useState, useEffect } from "react"
-import { useParams, Redirect } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 const Profile = ({ isLoggedIn}) => {
   const [user, setUser] = useState(null)
