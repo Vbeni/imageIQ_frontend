@@ -22,7 +22,7 @@
 .nav-links-right {
   display: flex;
   justify-content: space-around;
-  width: 30%; /* Adjust this value if the links are too close or too far apart */
+  width: 30%;
 }
 
 .nav-links-right a {
@@ -31,12 +31,17 @@
   font-size: 1em;
 }
 
-/* For the hover effect */
+
 .nav-link:hover, .nav-links-right a:hover {
   color: white;
 }
 
 .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
   text-align: center;
   margin: auto;
   width: 60%;
@@ -68,4 +73,15 @@
 
 .link-button:hover {
   background-color: white;
+}
+.footer {
+  background-color: grey;
+  color: black;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 1em;
 }
