@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.nav {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-links-right {
+  display: flex;
+  justify-content: space-around;
+  width: 30%; /* Adjust this value if the links are too close or too far apart */
+}
+
+.nav-links-right a {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* For the hover effect */
+.nav-link:hover, .nav-links-right a:hover {
+  color: white;
 }

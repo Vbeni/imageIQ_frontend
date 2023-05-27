@@ -1,13 +1,17 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 function Home() {
   return (
-    <div>Home
-        <h1>There will be info about the app here</h1>
+    <div>
+        <h1>Home of ImageIQ, an image recognition app designed to provide clarity to your visual content. ImageIq offers an intuitive platform for effortless image analysis. With its user-friendly interface, simply upload your images and let ImageIq handle the rest.</h1>
+        <div>
+        <Link to="/register">Sign Up</Link> 
+        <Link to="/login">Log In</Link> 
+        </div>
     </div>
   )
 }
 
 export default Home;
-
-//maybe sign up or log in buttons here instead of header
