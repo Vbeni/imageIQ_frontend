@@ -26,7 +26,7 @@ function ImageHistory({ userId }) {
         <ul className='image-list'>
           {images.map((image) => (
             <li key={image._id}>
-              <a href={`/image/${image._id}`}>
+              <a href={`${process.env.REACT_APP_API_URL}/image/${image._id}`}>
               <img className='history-image' src={image.Image} alt="" />
               </a>
             </li>
