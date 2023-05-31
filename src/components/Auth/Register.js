@@ -1,8 +1,9 @@
 import React from 'react'
 import  {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
+import { setUserToken } from '../../utils/authToken';
 
-const Register = ({signUp}) => {
+const Register = ({signUp, setIsLoggedIn}) => {
   const initialState = { username: "", password: ""}
   const [input, setInput] = useState(initialState)
 	const navigate = useNavigate()
@@ -13,6 +14,8 @@ const Register = ({signUp}) => {
 
     if (createdUserToken) {
       console.log(createdUserToken)
+      setUserToken(createdUserToken.token); 
+      setIsLoggedIn(true);
       navigate(`/user/${createdUserToken.currentUser._id}`);
     } else {
       navigate("/")

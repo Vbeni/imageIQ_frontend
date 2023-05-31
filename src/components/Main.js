@@ -14,7 +14,7 @@ const Main = ({ isLoggedIn, setIsLoggedIn, signUp, signIn, uploadImage }) => {
     <div className="Main">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Register" element={<Register signUp={signUp} />} />
+        <Route path="/Register" element={<Register signUp={signUp} setIsLoggedIn={setIsLoggedIn} />} />
         <Route
           path="/Login"
           element={<Login signIn={signIn} setIsLoggedIn={setIsLoggedIn} />}
