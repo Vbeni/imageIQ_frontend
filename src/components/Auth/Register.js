@@ -25,7 +25,7 @@ const Register = ({signUp}) => {
   };
 
   return (
-    <>
+    <div className='register-container'>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Name: </label>
@@ -41,6 +41,7 @@ const Register = ({signUp}) => {
         <input
           id="password"
           name="password"
+          type="password"
           value={input.password}
           onChange={handleChange}
         />
@@ -48,7 +49,7 @@ const Register = ({signUp}) => {
         <br />
         <input type="submit" value="Sign Up" />
       </form>
-    </>
+    </div>
   );
 };
 
