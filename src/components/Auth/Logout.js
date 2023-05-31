@@ -8,9 +8,9 @@ const Logout = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear user token from local storage
+
     clearUserToken();
-    // Redirect to the homepage or any other desired route
+
     navigate('/');
   };
 

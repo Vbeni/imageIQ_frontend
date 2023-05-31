@@ -26,7 +26,7 @@ const Login = ({ signIn }) => {
   };
 
   return (
-    <>
+    <div className='login-container'>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Name: </label>
@@ -42,6 +42,7 @@ const Login = ({ signIn }) => {
         <input
           id="password"
           name="password"
+          type='password'
           value={input.password}
           onChange={handleChange}
         />
@@ -49,7 +50,7 @@ const Login = ({ signIn }) => {
         <br />
         <input type="submit" value="Sign In" />
       </form>
-    </>
+    </div>
   );
 };
 
