@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import '@tensorflow/tfjs';
 import { load } from '@tensorflow-models/mobilenet';
 
@@ -66,6 +66,11 @@ function ImageShow() {
       ) : (
         <p className='image-loading'>Loading image...</p>
       )}
+       <div className="navigation-buttons">
+        <Link to="/imagehistory">Image History</Link>
+        <Link to={`/user/${image?.user._id}`}>Back to Profile</Link>
+      </div>
+
     </div>
   );
 }
