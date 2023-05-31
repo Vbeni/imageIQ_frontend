@@ -2,25 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '@tensorflow/tfjs';
 import { load } from '@tensorflow-models/mobilenet';
+import { useNavigate } from 'react-router-dom';
 
-function ImageShow() {
+function ImageShow({ isLoggedIn, setIsLoggedIn }) {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [image, setImage] = useState(null);
   const [predictions, setPredictions] = useState([]);
 
   useEffect(() => {
-    const fetchImage = async () => {
-      try {
-        const response = await fetch(`http://localhost:4000/image/${id}`);
-        const data = await response.json();
-        setImage(data);
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
+    // if(!isLoggedIn) {
+    //   navigate('/login');
+    // } else {
+      const fetchImage = async () => {
+        try {
+          const response = await fetch(`http://localhost:4000/image/${id}`);
+          const data = await response.json();
+          setImage(data);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
 
-    fetchImage();
-  }, [id]);
+      fetchImage();
+    }
+  , [id, isLoggedIn, navigate]);
 
   const classifyImage = async () => {
     const imageElement = document.getElementById('image-to-classify');

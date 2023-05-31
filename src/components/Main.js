@@ -25,7 +25,8 @@ const Main = ({ isLoggedIn, setIsLoggedIn, signUp, signIn, uploadImage }) => {
           element={<Profile setIsLoggedIn={setIsLoggedIn} />}
         />
         <Route path="/imagehistory" element={<ImageHistory />} />
-        <Route path="/image/:id" element={<ImageShow />} />
+        <Route path="/image/:id" element={<ImageShow isLoggedIn={isLoggedIn} 
+              setIsLoggedIn={setIsLoggedIn}/>} />
       </Routes>
     </div>
   );

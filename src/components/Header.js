@@ -5,6 +5,7 @@ const Header = ({ isLoggedIn }) => {
   return (
     <header>
       <nav>
+      <div className="logo">ImageIQ</div>
         <ul>
           {isLoggedIn ? (
             <>

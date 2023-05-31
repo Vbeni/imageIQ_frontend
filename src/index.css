@@ -1,40 +1,57 @@
-.nav {
-  background-color: grey;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2em; 
-}
-
-.header-nav {
+header {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 1em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 9999;
 }
 
-.nav-link {
-  color: black;
+nav {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* add this line */
+  align-items: center; /* add this line */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 2em;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 1em;
+  transition: color 0.3s ease;
 }
 
-.nav-links-right {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
+nav ul li a:hover {
+  color: rgb(128, 128, 128);
 }
 
-.nav-links-right a {
-  color: black;
-  text-decoration: none;
-  font-size: 1em;
+.logo {
+  font-size: 2em; /* update this line */
+  font-weight: bold;
+  color: #ffffff;  
+  margin-right: auto;
 }
 
 
-.nav-link:hover, .nav-links-right a:hover {
-  color: white;
-}
 
 .home {
   display: flex;
