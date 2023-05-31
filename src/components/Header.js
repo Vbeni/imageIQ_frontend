@@ -1,19 +1,34 @@
-import {Link} from 'react-router-dom'
-import React from "react";
-function Header(props){
-    return(
-        <div className='nav'>
-            <nav className='header-nav'>
-            <Link to="/" className='nav-link'>HOME</Link>
-            <div className='nav-links-right'>
-            <Link to="/login">LOGIN</Link>
-            <Link to="/register">REGISTER</Link>
-            <Link to="/logout">LOGOUT</Link>
-          
-            </div>
-            </nav>
-            </div>
-    );
-}
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Header = ({ isLoggedIn }) => {
+  return (
+    <header>
+      <nav>
+        <ul>
+          {isLoggedIn ? (
+            <>
+              <li>
+                <Link to="/imagehistory">Image History</Link>
+              </li>
+              <li>
+                <Link to="/logout">Logout</Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+            </>
+          )}
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

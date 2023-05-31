@@ -76,12 +76,15 @@ function App() {
       setIsAuthenticated(false)
     }
   }
-
+  const setIsLoggedIn = (value) => {
+    setIsAuthenticated(value);
+  };
   return (
     <div className="App">
-      <Header user={currentUser}/>
+      <Header user={currentUser} isLoggedIn={isAuthenticated}/>
       <Main 
-      isLoggedIn={isAuthenticated} 
+      isLoggedIn={isAuthenticated}
+      setIsLoggedIn={setIsLoggedIn}
       signUp={registerUser} 
       signIn={loginUser} 
       user={currentUser} 

@@ -4,11 +4,12 @@ import { clearUserToken } from '../../utils/authToken';
 
 
 
-const Logout = () => {
+const Logout = ({ setIsLoggedIn}) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
     clearUserToken();
+    setIsLoggedIn(false);
     navigate('/');
   };
 

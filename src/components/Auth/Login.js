@@ -4,7 +4,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const Login = ({ signIn }) => {
+const Login = ({ signIn, setIsLoggedIn }) => {
   const initialState = { username: "", password: "" };
   const [input, setInput] = useState(initialState);
   const navigate = useNavigate();
@@ -14,8 +14,10 @@ const Login = ({ signIn }) => {
     const userToken = await signIn(input);
 
     if (userToken && userToken.user && userToken.user._id) {
+      setIsLoggedIn(true);
       navigate(`/user/${userToken.user._id}`);
     } else {
+      setIsLoggedIn(false);
       navigate("/");
     }
     setInput(initialState);
