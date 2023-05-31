@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState, useEffect, useCallback } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
+
 
 function UploadImage({ onImageUpload, userid }) {
   const [imageUrl, setImageUrl] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,6 +26,7 @@ function UploadImage({ onImageUpload, userid }) {
       .then((data) => {
         console.log(data);
         onImageUpload(imageUrl);
+        navigate(`/image/${data._id}`);
       })
       .catch((error) => {
         console.error('Error:', error);

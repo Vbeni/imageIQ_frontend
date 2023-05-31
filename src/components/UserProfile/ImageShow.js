@@ -45,19 +45,18 @@ function ImageShow() {
 
   return (
     <div className="image-show-container">
-      <h2>Image Details</h2>
+    
       {image ? (
         <div className="image-details">
           <img id="image-to-classify" src={image.Image} alt="" />
           <p>Image ID: {image._id}</p>
-          <p>Image Description: {image.description}</p>
           {predictions.length > 0 && (
             <div>
               <h3>Predictions:</h3>
               {predictions.map((prediction, i) => (
                 <div key={i}>
                   <p>{prediction.className}</p>
-                  <p>{prediction.probability}</p>
+                  <p>Probability: {prediction.probability}</p>
                 </div>
               ))}
             </div>
