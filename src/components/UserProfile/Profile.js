@@ -15,7 +15,7 @@ function UploadImage({ onImageUpload, userid }) {
       userid: userid,
     };
 
-    fetch('http://localhost:4000/image', {
+    fetch(`${process.env.REACT_APP_API_URL}/image`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function UploadImage({ onImageUpload, userid }) {
 const Profile = () => {
   const [user, setUser] = useState(null);
   const { id } = useParams();
-  const URL = `http://localhost:4000/user/${id}`;
+  const URL = `${process.env.REACT_APP_API_URL}/user/${id}`;
 
   const getUser = useCallback(async () => {
     try {

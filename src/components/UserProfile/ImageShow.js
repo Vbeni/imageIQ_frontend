@@ -16,7 +16,7 @@ function ImageShow({ isLoggedIn, setIsLoggedIn }) {
     // } else {
       const fetchImage = async () => {
         try {
-          const response = await fetch(`http://localhost:4000/image/${id}`);
+          const response = await fetch(`${process.env.REACT_APP_API_URL}/image/${id}`);
           const data = await response.json();
           setImage(data);
         } catch (error) {

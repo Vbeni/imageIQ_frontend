@@ -6,7 +6,7 @@ function ImageHistory({ userId }) {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/image?userId=${userId}`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/image?userId=${userId}`);
         const data = await response.json();
         setImages(data);
       } catch (error) {

@@ -22,7 +22,7 @@ function App() {
       }
 
       const newUser = await fetch(
-        "http://localhost:4000/auth/register",
+        `${process.env.REACT_APP_API_URL}/auth/register`,
         configs
       )
 
@@ -57,7 +57,7 @@ function App() {
         },
       }
       const response = await fetch(
-        "http://localhost:4000/auth/login",
+        `${process.env.REACT_APP_API_URL}/auth/login`,
         configs
       )
       const user = await response.json()
