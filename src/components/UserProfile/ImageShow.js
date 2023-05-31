@@ -4,16 +4,16 @@ import '@tensorflow/tfjs';
 import { load } from '@tensorflow-models/mobilenet';
 import { useNavigate } from 'react-router-dom';
 
-function ImageShow({ isLoggedIn, setIsLoggedIn }) {
+function ImageShow({ isLoggedIn }) {
   const navigate = useNavigate();
   const { id } = useParams();
   const [image, setImage] = useState(null);
   const [predictions, setPredictions] = useState([]);
 
   useEffect(() => {
-    // if(!isLoggedIn) {
-    //   navigate('/login');
-    // } else {
+    if(!isLoggedIn) {
+      navigate('/login');
+    } else {
       const fetchImage = async () => {
         try {
           const response = await fetch(`${process.env.REACT_APP_API_URL}/image/${id}`);
@@ -26,7 +26,7 @@ function ImageShow({ isLoggedIn, setIsLoggedIn }) {
 
       fetchImage();
     }
-  , [id, isLoggedIn, navigate]);
+}, [id, isLoggedIn, navigate]);
 
   const classifyImage = async () => {
     const imageElement = document.getElementById('image-to-classify');
@@ -60,7 +60,7 @@ function ImageShow({ isLoggedIn, setIsLoggedIn }) {
             <div>
               <h3>Predictions:</h3>
               {predictions.map((prediction, i) => (
-                <div key={i}>
+                <div key={i} className="prediction-item">
                   <p>{prediction.className}</p>
                   <p>Probability: {prediction.probability}</p>
                 </div>

@@ -108,6 +108,7 @@ nav ul li a:hover {
   color: black;
   text-align: center;
   padding: 1em;
+  margin-top: 10em;
   position: bottom;
   left: 0;
   bottom: 0;
@@ -405,12 +406,13 @@ nav ul li a:hover {
 }
 
 .image-show-container img {
-  max-width: 80%; /* This will constrain the width */
-  max-height: 500px; /* This will constrain the height */
-  object-fit: cover; /* This will make sure the image scales nicely */
+  max-width: 80%; 
+  max-height: 500px; 
+  object-fit: cover; 
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   margin-bottom: 1em;
+  margin-top: 20em;
 }
 
 .image-show-container .image-details {
@@ -432,6 +434,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   margin-top: 2em;
+  margin-bottom: 15em;
 }
 
 .navigation-buttons a {
@@ -463,5 +466,16 @@ nav ul li a:hover {
   background-color: rgb(128, 128, 128);
 }
 
+.prediction-item {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.prediction-item p {
+  margin: 0.5em 0;
+}
 
 
