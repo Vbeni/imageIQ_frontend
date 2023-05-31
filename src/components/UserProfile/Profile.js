@@ -36,8 +36,8 @@ function UploadImage({ onImageUpload, userid }) {
   };
 
   return (
-    <div>
-      <h2>Upload Profile Image</h2>
+    <div className='image-upload-container'>
+      <h2>Upload Image</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Enter image URL" value={imageUrl} onChange={handleChange} />
         <button type="submit">Upload</button>
@@ -71,11 +71,11 @@ const Profile = () => {
   };
 
   return (
-    <div>
+    <div className='profile-container'>
       <h1>Hi {user && user.username}</h1>
       <UploadImage onImageUpload={handleImageUpload} userid={id} />
       <Link to="/imagehistory">
-        <button>View Image History</button>
+        <button className='view-history-button'>View Image History</button>
       </Link>
     </div>
   );

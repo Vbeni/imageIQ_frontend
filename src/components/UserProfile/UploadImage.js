@@ -30,7 +30,7 @@ function UploadImage({ onImageUpload }) {
 
   return (
     <div>
-      <h2>Upload Profile Image</h2>
+      <h2>Upload an Image</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Enter image URL" value={imageUrl} onChange={handleChange} />
         <button type="submit">Upload</button>

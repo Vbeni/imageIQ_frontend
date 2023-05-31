@@ -18,15 +18,15 @@ function ImageHistory({ userId }) {
   }, [userId]);
 
   return (
-    <div>
+    <div className='history-container'>
       <h2>Image History</h2>
       {images.length === 0 ? (
         <p>No images found.</p>
       ) : (
-        <ul>
+        <ul className='image-list'>
           {images.map((image) => (
             <li key={image._id}>
-              <img src={image.Image} alt="" />
+              <img className='history-image' src={image.Image} alt="" />
             </li>
           ))}
         </ul>

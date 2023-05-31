@@ -197,3 +197,122 @@
 .register-container input[type="submit"]:hover {
   background-color: white;
 }
+
+.logout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.logout-container h1 {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.logout-container p {
+  color: black;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.logout-container button {
+  background-color: grey;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-container button:hover {
+  background-color: white;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #f2f2f2; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
+}
+
+.profile-container h1 {
+  color: black;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.image-upload-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  background-color: #f2f2f2; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
+}
+
+.image-upload-container h2 {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.image-upload-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.image-upload-container input {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.image-upload-container button {
+  background-color: rgb(74, 73, 73);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1em;
+}
+
+.image-upload-container button:hover {
+  background-color: rgb(128 128, 128);
+}
+.view-history-button {
+  color: rgb(0, 0, 0);
+  background-color: rgb(74, 73, 73);
+  text-decoration: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.view-history-button:hover {
+  background-color: rgb(128 128, 128);
+}
+

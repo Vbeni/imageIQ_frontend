@@ -8,18 +8,16 @@ const Logout = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-
     clearUserToken();
-
     navigate('/');
   };
 
   return (
-    <>
+    <div className='logout-container'>
       <h1>Logout</h1>
       <p>Are you sure you want to logout?</p>
       <button onClick={handleLogout}>Logout</button>
-    </>
+    </div>
   );
 };
 
