@@ -27,7 +27,7 @@ function App() {
       )
 
       const parsedUser = await newUser.json()
-      // console.log(parsedUser)
+  
 
       // sets local storage
       setUserToken(parsedUser.token)
@@ -41,7 +41,7 @@ function App() {
 
       return parsedUser
     } catch (err) {
-      console.log(err)
+    
       clearUserToken();
       setIsAuthenticated(false);
     }
@@ -61,8 +61,6 @@ function App() {
         configs
       )
       const user = await response.json()
-      //console.log(user)
-
       // sets local storage
       setUserToken(user.token)
       // put the returned user object in state

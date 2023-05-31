@@ -24,7 +24,6 @@ function UploadImage({ onImageUpload, userid }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         onImageUpload(imageUrl);
         navigate(`/image/${data._id}`);
       })
@@ -58,9 +57,7 @@ const Profile = () => {
       const response = await fetch(URL);
       const result = await response.json();
       setUser(result);
-      console.log(result);
     } catch (err) {
-      console.log(err);
     }
   }, [URL]);
 
@@ -69,7 +66,7 @@ const Profile = () => {
   }, [getUser]);
 
   const handleImageUpload = (imageUrl) => {
-    console.log('Uploaded image URL:', imageUrl);
+   
   };
 
   return (

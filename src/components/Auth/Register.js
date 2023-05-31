@@ -13,7 +13,6 @@ const Register = ({signUp, setIsLoggedIn}) => {
     const createdUserToken = await signUp(input)
 
     if (createdUserToken) {
-      console.log(createdUserToken)
       setUserToken(createdUserToken.token); 
       setIsLoggedIn(true);
       navigate(`/user/${createdUserToken.currentUser._id}`);
