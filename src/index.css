@@ -316,3 +316,44 @@
   background-color: rgb(128 128, 128);
 }
 
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.history-container h2 {
+  color: black;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.history-container p {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.history-image {
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-bottom: 1em;
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  list-style-type: none; 
+  padding: 0; 
+}
