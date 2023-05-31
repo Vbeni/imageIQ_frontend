@@ -4,11 +4,11 @@ import Footer from "./components/Footer";
 
 import Main from "./components/Main";
 import React, { useState } from 'react';
-import { setUserToken, clearUserToken, getUserToken} from './utils/authToken'
+import { setUserToken, clearUserToken } from './utils/authToken'
 
 function App() {
   const [currentUser, setCurrentUser] = useState({})
-  const [isAuthenticated, setIsAuthenticated] = useState(getUserToken() ? true : false)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   
   const registerUser = async (data) => {
     try {
