@@ -9,6 +9,7 @@ function Header(props){
             <Link to="/login">LOGIN</Link>
             <Link to="/register">REGISTER</Link>
             <Link to="/logout">LOGOUT</Link>
+          
             </div>
             </nav>
             </div>
