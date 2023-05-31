@@ -7,7 +7,7 @@ import Profile from "./UserProfile/Profile";
 import UploadImage from "./UserProfile/UploadImage";
 import React from 'react'
 import ImageHistory from "./UserProfile/ImageHistory";
-
+import ImageShow from "./UserProfile/ImageShow";
 const Main = ({ isLoggedIn, signUp, signIn, user, uploadImage}) => {
   return (
     <div className="Main">
@@ -19,6 +19,8 @@ const Main = ({ isLoggedIn, signUp, signIn, user, uploadImage}) => {
        <Route path='/user/:id' element={<Profile />} /> 
        <Route path="/image" element={<UploadImage />} />
        <Route path="/imagehistory" element={<ImageHistory />} />
+       <Route path="/image/:id" element={<ImageShow />} />
+
       </Routes>
     </div>
   )

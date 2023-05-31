@@ -26,7 +26,9 @@ function ImageHistory({ userId }) {
         <ul className='image-list'>
           {images.map((image) => (
             <li key={image._id}>
+              <a href={`/image/${image._id}`}>
               <img className='history-image' src={image.Image} alt="" />
+              </a>
             </li>
           ))}
         </ul>
