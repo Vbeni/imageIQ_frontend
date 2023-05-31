@@ -1,6 +1,6 @@
-import React from 'react'
-import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
+import React from 'react';
+import { useState, useEffect, useCallback } from "react";
+import { useParams, Link } from "react-router-dom";
 
 function UploadImage({ onImageUpload, userid }) {
   const [imageUrl, setImageUrl] = useState('');
@@ -9,8 +9,8 @@ function UploadImage({ onImageUpload, userid }) {
     event.preventDefault();
 
     const data = {
-      imageUrl: imageUrl, 
-      userid: userid, 
+      imageUrl: imageUrl,
+      userid: userid,
     };
 
     fetch('http://localhost:4000/image', {
@@ -22,9 +22,8 @@ function UploadImage({ onImageUpload, userid }) {
     })
       .then((response) => response.json())
       .then((data) => {
-       
-        console.log(data); 
-        onImageUpload(imageUrl); 
+        console.log(data);
+        onImageUpload(imageUrl);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -51,7 +50,7 @@ const Profile = () => {
   const { id } = useParams();
   const URL = `http://localhost:4000/user/${id}`;
 
-  const getUser = async () => {
+  const getUser = useCallback(async () => {
     try {
       const response = await fetch(URL);
       const result = await response.json();
@@ -60,11 +59,11 @@ const Profile = () => {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [URL]);
 
   useEffect(() => {
     getUser();
-  }, [id]);
+  }, [getUser]);
 
   const handleImageUpload = (imageUrl) => {
     console.log('Uploaded image URL:', imageUrl);
