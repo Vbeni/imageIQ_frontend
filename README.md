@@ -1,4 +1,5 @@
-# IMAGEIQ WIREFRAME
+# IMAGEIQ
+<img width="1313" alt="ImageIQ" src="https://github.com/Vbeni/imageIQ_frontend/assets/123101303/605d0eb3-9ddd-4d8e-8354-21bef24e853e">
 
 https://trello.com/b/U2NN9TsL/imageiq
 
